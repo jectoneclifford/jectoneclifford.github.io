@@ -10,59 +10,130 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+	 <!-- Improved Slideshow CSS -->
+    <style>
+        /* Custom Slideshow for Featured Project - Full Images, No Cropping, Continuous */
+        .post.featured .image.main {
+            position: relative;
+            width: 100%;
+            height: 80vh;                  /* Tall prominent section */
+            min-height: 450px;             /* Ensures good size even on small phones */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: transparent;              /* Solid black background */
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Welcome to<br />
-						JECTONE CLIFFORD'S PORTFOLIO</h1>
-						<p>describe </a><br />
-						</a>.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        .slideshow-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;           /* Shows FULL image - NO CROPPING */
+            object-position: center;       /* Nicely centered */
+            background: transparent;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Welcome</a>
-					</header>
+        /* First image visible on load */
+        .slideshow-container img:first-child {
+            opacity: 1;
+        }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">social handles</a></li>		
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-x-twitter"><span class="label">X</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-tiktok"><span class="label">Tiktok</span></a></li>
-						</ul>
-					</nav>
+        /* Fade animation: each image visible for ~3 seconds */
+        @keyframes slideshow {
+            0%   { opacity: 1; }
+            30%  { opacity: 1; }
+            33.33% { opacity: 0; }
+            96.66% { opacity: 0; }
+            100% { opacity: 0; }
+        }
 
-				<!-- Main -->
-					<div id="main">
+        /* Timing for 3 images → 9-second full loop, runs forever */
+        .slideshow-container img:nth-child(1) { animation: slideshow 9s infinite 0s; }
+        .slideshow-container img:nth-child(2) { animation: slideshow 9s infinite 3s; }
+        .slideshow-container img:nth-child(3) { animation: slideshow 9s infinite 6s; }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class=""></span>
-									<h2><a href="https://github.com/jectoneclifford/project1.git">work1<br />
-									</a></h2>
-									<p>definition<br />
-									overview<br />
-									overview.</p>
-								</header>
-								<a href="https://github.com/jectoneclifford/project1.git" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/jectoneclifford/project1.git" class="button large">View Work</a></li>
-								</ul>
-							</article>
+        /* NO pause on hover/tap - slideshow runs continuously */
+        /* (Intentionally removed) */
+
+        /* Extra mobile optimization */
+        @media (max-width: 736px) {
+            .post.featured .image.main {
+                height: 70vh;
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+    <!-- Intro -->
+    <div id="intro">
+        <h1>JECTONE CLIFFORD ABONYO'S<br />
+        PORTFOLIO</h1>
+        <p>A skilled Production Engineer experienced in operating and maintaining pasteurizers, industrial electrical wiring, cold room refrigeration systems,
+			and gas piping installations to ensure safe and efficient production. Focused on minimizing downtime, improving process performance
+			and maintaining high standards of safety, quality, and equipment reliability in industrial environments<a href="https://twitter.com/BxtonTheAnalyst"> @BxtonTheAnalyst</a>
+        <ul class="actions">
+            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+    </div>
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">welcome</a>
+    </header>
+    <!-- Nav -->
+    <nav id="nav">
+        <ul class="links">
+            <li class="active"><a href="index.html">My Portfolio</a></li>
+            <li class="active"><a href="index.html"></a></li>
+            <li class="active"><a href="elements.html"></a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+        </ul>
+    </nav>
+    <!-- Main -->
+    <div id="main">
+        <!-- Featured Post with Slideshow -->
+        <article class="post featured">
+            <header class="major">
+                <h2><a href="https://github.com/ookochrispine/Monitoring-Evaluation.git">MONITORING AND EVALUATION
+                <br />
+                </a></h2>
+                <p>This project presents a Monitoring and Evaluation (M&E) analysis of a community based Real Time Feedback Mechanism (RTFM) implemented within an urban humanitarian food security program in Nairobi, Kenya.
+                The analysis demonstrates how feedback systems enhance Accountability to Affected Populations (AAP), program quality, and adaptive learning. All data used are simulated to reflect real humanitarian MEAL systems while maintaining ethical and data protection standards.
+                .<br />
+                <br />
+                </p>
+            </header>
+            <!-- Slideshow Replacement -->
+            <a href="https://github.com/ookochrispine/Monitoring-Evaluation.git" class="image main">
+                <div class="slideshow-container">
+                    <img src="images/evaluation.jpeg" alt="Monitoring and Evaluation Project - Image 1" />
+                    <img src="images/evaluation2.jpeg" alt="Monitoring and Evaluation Project - Image 2" />
+                    <img src="images/evaluation3.jpeg" alt="Monitoring and Evaluation Project - Image 3" />
+                </div>
+            </a>
+            <ul class="actions special">
+                <li><a href="https://github.com/ookochrispine/Monitoring-Evaluation.git" class="button large">View Project</a></li>
+            </ul>
+        </article>
+        <!-- Posts -->
 
 						<!-- Posts -->
 							<section class="posts">
@@ -190,6 +261,7 @@
 	</body>
 
 </html>
+
 
 
 
